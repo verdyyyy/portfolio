@@ -25,3 +25,10 @@ Moderní portfolio vytvořené pomocí React, TypeScript a Vite.
 ```bash
 git clone https://gitlab.spseplzen.cz/verdanm/portfolio.git
 cd portfolio
+npm install
+
+## 🚀 Instalace
+Spusťte vývojový server:
+
+```bash
+npm run dev
