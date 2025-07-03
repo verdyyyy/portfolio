@@ -44,12 +44,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
 
   return (
     <>
-      {/* Theme Toggle - Top Left on mobile, Top Right on desktop */}
+      {/* Theme Toggle - Top Right on both mobile and desktop */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="fixed top-4 left-4 md:top-6 md:right-6 md:left-auto z-50"
+        className="fixed top-4 right-4 md:top-6 md:right-6 z-50"
       >
         <motion.button
           whileHover={{ scale: 1.1, rotate: 180 }}
