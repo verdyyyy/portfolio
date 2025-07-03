@@ -34,12 +34,13 @@ npm run dev
 ```
 
 ## 📂 Struktura Projektu
+```diff
 portfolio/
 ├── src/
 │   ├── components/    # React komponenty
 │   ├── pages/         # Stránky aplikace
-│   ├── styles/        # Globální styly
-│   └── main.tsx       # Vstupní bod
+│   ├── assets/        # Obrázky a styly
+│   └── App.tsx        # Hlavní komponenta
 ├── public/            # Statické soubory
-├── vite.config.ts     # Konfigurace Vite
-└── package.json       # Závislosti a skripty
+├── package.json       # Závislosti
+└── README.md          # Dokumentace
