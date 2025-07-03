@@ -10,7 +10,6 @@ Moderní portfolio vytvořené pomocí React, TypeScript a Vite.
 
 - [Technologie](#technologie)
 - [Instalace](#instalace)
-- [Vývoj](#vývoj)
 - [Struktura Projektu](#struktura-projektu)
 
 ## 💻 Technologie
@@ -32,3 +31,15 @@ cd portfolio
 ```bash
 npm install
 npm run dev
+```
+
+## 📂 Struktura Projektu
+portfolio/
+├── src/
+│   ├── components/    # React komponenty
+│   ├── pages/         # Stránky aplikace
+│   ├── styles/        # Globální styly
+│   └── main.tsx       # Vstupní bod
+├── public/            # Statické soubory
+├── vite.config.ts     # Konfigurace Vite
+└── package.json       # Závislosti a skripty
