@@ -71,15 +71,15 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
         </motion.button>
       </motion.div>
 
-      {/* Bottom Centered Navigation - Adjusted width */}
+      {/* Bottom Centered Navigation - Made bigger on mobile */}
       <motion.nav
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
         className="fixed bottom-4 md:bottom-8 z-50 w-full flex justify-center px-4"
       >
-        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl md:rounded-3xl px-3 md:px-6 py-3 md:py-4 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl">
-          <div className="flex items-center space-x-2 md:space-x-4">
+        <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-2xl md:rounded-3xl px-4 md:px-6 py-4 md:py-4 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl">
+          <div className="flex items-center space-x-3 md:space-x-4">
             {menuItems.map((item, index) => {
               const IconComponent = item.icon;
               const isActive = activeSection === item.id;
@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
                     whileHover={{ scale: 1.1, y: -4 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => scrollToSection(item.id)}
-                    className={`relative p-2.5 md:p-4 rounded-xl md:rounded-2xl transition-all duration-300 group ${
+                    className={`relative p-3 md:p-4 rounded-xl md:rounded-2xl transition-all duration-300 group ${
                       isActive && !isGitLab
                         ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg'
                         : isGitLab
@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
                         : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400'
                     }`}
                   >
-                    <IconComponent size={18} className="md:w-6 md:h-6" />
+                    <IconComponent size={20} className="md:w-6 md:h-6" />
 
                     {/* GitLab special indicator */}
                     {isGitLab && (
