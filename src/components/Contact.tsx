@@ -71,15 +71,15 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'verdan.marek@seznam.cz',
+      content: '',
       href: 'mailto:verdan.marek@seznam.cz',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: Instagram,
       title: 'Instagram',
-      content: 'notverdy',
-      href: '',
+      content: '',
+      href: 'https://instagram.com/notverdy/',
       color: 'from-purple-500 to-pink-500'
     },
     {
