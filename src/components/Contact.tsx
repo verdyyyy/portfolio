@@ -91,8 +91,8 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900 min-h-screen flex items-center">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900 min-h-screen flex items-center overflow-hidden">
+      <div className="container mx-auto px-4 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -252,7 +252,7 @@ const Contact: React.FC = () => {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -276,7 +276,7 @@ const Contact: React.FC = () => {
                     href={info.href}
                     target={info.href.startsWith('http') ? '_blank' : '_self'}
                     rel={info.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                    whileHover={{ scale: 1.02, x: 10 }}
+                    whileHover={{ scale: 1.02, x: 5 }}
                     className="flex items-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-200/50 dark:border-gray-700/50"
                   >
                     <div className={`w-14 h-14 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -309,7 +309,7 @@ const Contact: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, y: -5 }}
+                      whileHover={{ scale: 1.1, y: -3 }}
                       whileTap={{ scale: 0.9 }}
                       className={`w-14 h-14 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 ${link.color} ${link.bgColor} border border-gray-200/50 dark:border-gray-700/50`}
                     >

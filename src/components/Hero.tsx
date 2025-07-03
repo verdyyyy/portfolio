@@ -40,15 +40,15 @@ const Hero: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900/20" />
       
-      {/* Floating Particles */}
+      {/* Floating Particles - Constrained to viewport */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-blue-400/30 dark:bg-purple-400/30 rounded-full"
             animate={{
-              x: [0, Math.random() * 100 - 50],
-              y: [0, Math.random() * 100 - 50],
+              x: [0, Math.min(Math.random() * 50 - 25, 25)],
+              y: [0, Math.min(Math.random() * 50 - 25, 25)],
               opacity: [0, 1, 0],
             }}
             transition={{
@@ -57,14 +57,14 @@ const Hero: React.FC = () => {
               delay: Math.random() * 2,
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.max(10, Math.min(90, Math.random() * 80 + 10))}%`,
+              top: `${Math.max(10, Math.min(90, Math.random() * 80 + 10))}%`,
             }}
           />
         ))}
       </div>
       
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-4 z-10 max-w-full">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -150,12 +150,12 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Enhanced Floating Elements */}
+      {/* Enhanced Floating Elements - Constrained to viewport */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
+            x: [0, 50, 0],
+            y: [0, -25, 0],
             rotate: [0, 180, 360],
           }}
           transition={{
@@ -167,8 +167,8 @@ const Hero: React.FC = () => {
         />
         <motion.div
           animate={{
-            x: [0, -80, 0],
-            y: [0, 100, 0],
+            x: [0, -40, 0],
+            y: [0, 50, 0],
             rotate: [0, -180, -360],
           }}
           transition={{
@@ -180,8 +180,8 @@ const Hero: React.FC = () => {
         />
         <motion.div
           animate={{
-            x: [0, 60, 0],
-            y: [0, -80, 0],
+            x: [0, 30, 0],
+            y: [0, -40, 0],
             rotate: [0, 90, 180],
           }}
           transition={{

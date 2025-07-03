@@ -32,10 +32,10 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors overflow-x-hidden">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <About />
         <Experience />
