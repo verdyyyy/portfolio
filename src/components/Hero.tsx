@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       const timer = setTimeout(() => {
         document.body.style.overflow = '';
         window.__hasLoadedOnce = true;
-      }, 2000);
+      }, 2100);
 
       return () => {
         document.body.style.overflow = '';
